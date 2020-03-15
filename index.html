@@ -7,7 +7,7 @@
     <title>Singolo</title>
   </head>
   <body>
-    
+
     <!-- Sprite -->
     <svg style="display: none;">
       <symbol id="arrow" viewBox="0 0 492 492">
@@ -23,49 +23,93 @@
     </svg>
 
     <!--Header-->
-    <header class="header">
+    <header id="header" class="header">
       <div class="container">
         <div class="header__inner">
-          <h1 href="#" class="header__logo">Singolo</h1>
-          <nav class="nav">
-            <a href="#" class="nav__link">Home</a>
-            <a href="#" class="nav__link">Services</a>
-            <a href="#" class="nav__link">Portfolio</a>
-            <a href="#" class="nav__link">About</a>
-            <a href="#" class="nav__link">Contact</a>
+          <h1 class="header__logo">Singolo</h1>
+          <nav id="nav" class="nav">
+            <a href="#home" class="nav__link">Home</a>
+            <a href="#services" class="nav__link">Services</a>
+            <a href="#portfolio" class="nav__link">Portfolio</a>
+            <a href="#about" class="nav__link">About</a>
+            <a href="#contact" class="nav__link">Contact</a>
           </nav>
         </div>
       </div>
     </header>
 
     <!--Slider-->
-    <section class="slider">
+    <section id="home" class="slider">
       <div class="container">
-        <span class="arrow arrow--left">
+        <!-- Arrow -->
+        <span onclick="minusSlide()" class="arrow arrow--left">
           <svg class="arrow__icon">
             <use xlink:href="#arrow"></use>
           </svg>
         </span>
-        <span class="arrow arrow--right">
+        <span onclick="plusSlide()" class="arrow arrow--right">
           <svg class="arrow__icon">
             <use xlink:href="#arrow"></use>
           </svg>
         </span>
-        <img
-          class="phone phone--vertical"
-          src="assets/img/slider/iphone_vertical.png"
-          alt="iPhone"
-        />
-        <img
-          class="phone phone--horizontal"
-          src="assets/img/slider/iphone_horizontal.png"
-          alt="iPhone"
-        />
+      </div>
+
+      <!-- Slide One -->
+      <div class="item slide__one hidden">
+        <div class="container">
+          <div class="phone__vertical">
+            <img
+              class="mobile--vertical"
+              src="assets/img/slider/slide_one/iphone_vertical.png"
+              alt="iPhone"
+            />
+            <img
+              class="display--vertical"
+              src="assets/img/slider/slide_one/iphone-vertical-display.png"
+              alt="iPhone"
+            />
+          </div>
+          <div class="phone__horizontal">
+            <img
+              class="mobile--horizontal"
+              src="assets/img/slider/slide_one/iphone_horizontal.png"
+              alt="iPhone"
+            />
+            <img 
+              class="display--horizontal"
+              src="assets/img/slider/slide_one/iphone-horizontal-display.png"
+              alt="iPhone"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Two -->
+      <div class="item slide__two ">
+        <div class="container">
+          <div class="phone__group">
+            <img
+              class="mobile-one"
+              src="assets/img/slider/slide_two/iphone_1.png"
+              alt="iPhone"
+            />
+            <img
+              class="mobile-two"
+              src="assets/img/slider/slide_two/iphone_2.png"
+              alt="iPhone"
+            />
+            <img
+              class="mobile-three"
+              src="assets/img/slider/slide_two/iphone_3.png"
+              alt="iPhone"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
     <!--Services-->
-    <section class="services">
+    <section id="services" class="services">
       <div class="container">
         <h1 class="services__title">Our Services</h1>
         <p class="services__description--one">
@@ -197,7 +241,7 @@
     </section>
 
     <!-- Portfolio -->
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container">
         <h1 class="portfolio__title">Portfolio</h1>
         <p class="portfolio__description">
@@ -206,56 +250,56 @@
             eget lacinia odio sem nec elit.
           </span>
         </p>
-        <div class="portfolio__filter">
-          <button class="portfolio__button">All</button>
-          <button class="portfolio__button">Web Design</button>
-          <button class="portfolio__button">Graphic Design</button>
-          <button class="portfolio__button">Artwork</button>
+        <div id="myBtnContainer" class="portfolio__filter">
+          <button onclick="filterSelection('all')" class="portfolio__button portfolio__button--active">All</button>
+          <button onclick="filterSelection('design')" class="portfolio__button">Web Design</button>
+          <button onclick="filterSelection('graphic')" class="portfolio__button">Graphic Design</button>
+          <button onclick="filterSelection('artwork')" class="portfolio__button">Artwork</button>
         </div>
 
-        <div class="portfolio__gallery">
-          <div class="portfolio__work">
-            <img src="assets/img/galery/1.png" alt="" />
+        <div id="works" class="portfolio__gallery">
+          <div class="portfolio__work design">
+            <img class="portfolio__img " src="assets/img/galery/1.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/2.png" alt="" />
+          <div class="portfolio__work artwork">
+            <img class="portfolio__img" src="assets/img/galery/2.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/3.png" alt="" />
+          <div class="portfolio__work design">
+            <img class="portfolio__img" src="assets/img/galery/3.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/4.png" alt="" />
+          <div class="portfolio__work artwork">
+            <img class="portfolio__img" src="assets/img/galery/4.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/5.png" alt="" />
+          <div class="portfolio__work design">
+            <img class="portfolio__img" src="assets/img/galery/5.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/6.png" alt="" />
+          <div class="portfolio__work artwork">
+            <img class="portfolio__img" src="assets/img/galery/6.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/7.png" alt="" />
+          <div class="portfolio__work design">
+            <img class="portfolio__img" src="assets/img/galery/7.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/8.png" alt="" />
+          <div class="portfolio__work graphic">
+            <img class="portfolio__img" src="assets/img/galery/8.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/9.png" alt="" />
+          <div class="portfolio__work graphic">
+            <img class="portfolio__img" src="assets/img/galery/9.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/10.png" alt="" />
+          <div class="portfolio__work graphic">
+            <img class="portfolio__img" src="assets/img/galery/10.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/11.png" alt="" />
+          <div class="portfolio__work graphic">
+            <img class="portfolio__img" src="assets/img/galery/11.png" alt=""/>
           </div>
-          <div class="portfolio__work">
-            <img src="assets/img/galery/12.png" alt="" />
+          <div class="portfolio__work artwork">
+            <img class="portfolio__img" src="assets/img/galery/12.png" alt=""/>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About Us -->
-    <section class="about">
+    <section id="about" class="about">
       <div class="container">
         <h1 class="about__title">About Us</h1>
         <p class="about__description">
@@ -275,7 +319,7 @@
           <div class="about__person">
             <img src="assets/img/about/1.png" alt="" />
             <p class="about__person-name">
-              Adam Jensen 
+              Adam Jensen
             </p>
             <p class="about__person-description">
               <span
@@ -353,7 +397,7 @@
     </section>
 
     <!-- Get a Quote -->
-    <section class="getquote">
+    <section id="contact" class="getquote">
       <div class="container">
         <h1 class="getquote__title">Get a Quote</h1>
         <p class="getquote__description">
@@ -383,14 +427,14 @@
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
             />
-            <input placeholder="Subject" type="text" name="text" />
-            <textarea
+            <input id="subject"  placeholder="Subject" type="text" name="subject" />
+            <textarea id="description" 
               placeholder="Describe your project in detail..."
               rows="10"
               cols="45"
               name="text"
             ></textarea>
-            <button class="form__btn" type="submit">Submit</button>
+            <button id="btn" class="form__btn"  type="submit" value="Submit">Submit</button>
           </form>
 
           <div class="contact__information">
@@ -419,6 +463,18 @@
       </div>
     </section>
 
+    <!-- Modal -->
+    <div id="alert" class="alert alert__hidden">
+      <div class="alert__msg">
+        <p>Письмо отправлено</p>
+        <p id="alert-topic">Без темы</p>
+        <p id="alert-text">Без описания</p>
+        <div style="text-align: center; margin-top: 10px;">
+          <button id="close-btn" class="contact__btn">OK</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -441,5 +497,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
