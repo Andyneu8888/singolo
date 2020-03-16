@@ -270,6 +270,12 @@ button {
   left: 16px;
   z-index: 1;
 }
+.shadow--vertical{
+  position: absolute;
+  z-index: 0;
+  top: 53px;
+  left: 82px;
+}
 
 .phone__horizontal {
   position: absolute;
@@ -286,6 +292,12 @@ button {
   top: 14px;
   left: 60px;
   z-index: 1;
+}
+.shadow--horizontal{
+  position: absolute;
+  top: 174px;
+  left: 395px;
+  z-index: 0;
 }
 
 /* Slide Two*/

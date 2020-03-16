@@ -42,6 +42,9 @@ MENU.forEach(function (item) {
 
 /* OFF/ON Display
 ==================*/
+
+
+
 const PHONE_VERTICAL = document.querySelectorAll(".phone__vertical");
 PHONE_VERTICAL.forEach(element =>
   element.addEventListener("click", e => {
